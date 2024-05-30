@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Started)
+        if(context.phase == InputActionPhase.Performed)
         {
             curMovementInput = context.ReadValue<Vector2>();
         }

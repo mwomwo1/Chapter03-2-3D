@@ -22,12 +22,12 @@ public class PlayerCondition : MonoBehaviour, IDamagable
         hunger.Subtract(hunger.passiveValue * Time.deltaTime);
         stamina.Add(stamina.passiveValue * Time.deltaTime);
 
-        if(hunger.curValue < 0.0f)
+        if(hunger.curValue <= 0.0f)
         {
             health.Subtract(noHungerHealthDecay * Time.deltaTime);
         }
 
-        if(health.curValue < 0.0f)
+        if(health.curValue <= 0.0f)
         {
             Die();
         }
